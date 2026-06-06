@@ -64,6 +64,20 @@ public class GlobalExceptionHandler {
     }
 
     /**
+     * Handles optimistic locking concurrency conflicts.
+     * Returns 409 Conflict.
+     */
+    @ExceptionHandler(org.springframework.orm.ObjectOptimisticLockingFailureException.class)
+    public ResponseEntity<ErrorResponse> handleOptimisticLockingFailure(org.springframework.orm.ObjectOptimisticLockingFailureException ex) {
+        ErrorResponse error = new ErrorResponse(
+            "CONCURRENCY_CONFLICT",
+            "The account was updated by another transaction. Please try again.",
+            LocalDateTime.now()
+        );
+        return new ResponseEntity<>(error, HttpStatus.CONFLICT);
+    }
+
+    /**
      * structured Error Response DTO
      */
     public record ErrorResponse(
