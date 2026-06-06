@@ -79,14 +79,14 @@ Use prefix-based commit messages to keep a clear log:
 * [x] Merge branch to main: Switch to main (`git checkout main`), merge (`git merge feature/monolith-data-model`), and delete feature branch.
 
 #### [ ] Step 5: Implement Business Services
-* [ ] Create branch `feature/monolith-services` (`git checkout -b feature/monolith-services`).
-* [ ] Create `com.example.banking.service.AccountService` with methods: `createAccount()`, `getAccountByNumber()`, and helper update balance logic.
-* [ ] Create `com.example.banking.service.TransferService` containing business logic for:
+* [x] Create branch `feature/monolith-services` (`git checkout -b feature/monolith-services`).
+* [x] Create `com.example.banking.service.AccountService` with methods: `createAccount()`, `getAccountByNumber()`, and helper update balance logic.
+* [x] Create `com.example.banking.service.TransferService` containing business logic for:
   - Checking if both accounts exist.
   - Ensuring the sender has sufficient balance.
   - Making balance updates atomic (use `@Transactional` annotation).
   - Saving a `Transaction` ledger log.
-* [ ] Write simple JUnit unit tests for transfer scenarios (successful transfer, insufficient balance).
+* [x] Write simple JUnit unit tests for transfer scenarios (successful transfer, insufficient balance).
 * [ ] Commit services: `feat: implement AccountService and TransferService business logic`.
 * [ ] Merge branch to main.
 
