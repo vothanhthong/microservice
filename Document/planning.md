@@ -87,8 +87,8 @@ Use prefix-based commit messages to keep a clear log:
   - Making balance updates atomic (use `@Transactional` annotation).
   - Saving a `Transaction` ledger log.
 * [x] Write simple JUnit unit tests for transfer scenarios (successful transfer, insufficient balance).
-* [ ] Commit services: `feat: implement AccountService and TransferService business logic`.
-* [ ] Merge branch to main.
+* [x] Commit services: `feat: implement AccountService and TransferService business logic`.
+* [x] Merge branch to main.
 
 #### [ ] Step 6: Build REST Controllers (APIs)
 * [ ] Create branch `feature/monolith-apis` (`git checkout -b feature/monolith-apis`).
