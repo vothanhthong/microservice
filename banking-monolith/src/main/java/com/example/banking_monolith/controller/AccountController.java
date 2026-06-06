@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import com.example.banking_monolith.dto.AccountRequestDTO;
 import com.example.banking_monolith.model.Account;
 import com.example.banking_monolith.service.AccountService;
+import jakarta.validation.Valid;
 
 import lombok.RequiredArgsConstructor;
 
@@ -22,7 +23,7 @@ public class AccountController {
      * Returns 201 Created on success.
      */
     @PostMapping
-    public ResponseEntity<Account> createAccount(@RequestBody AccountRequestDTO request) {
+    public ResponseEntity<Account> createAccount(@Valid @RequestBody AccountRequestDTO request) {
         Account createdAccount = accountService.createAccount(
             request.ownerName(), 
             request.initialBalance()

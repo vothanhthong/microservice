@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import com.example.banking_monolith.dto.TransferRequestDTO;
 import com.example.banking_monolith.model.Transaction;
 import com.example.banking_monolith.service.TransferService;
+import jakarta.validation.Valid;
 
 import lombok.RequiredArgsConstructor;
 
@@ -22,7 +23,7 @@ public class TransferController {
      * Returns 200 OK on success containing the logged transaction ledger record.
      */
     @PostMapping
-    public ResponseEntity<Transaction> transferFunds(@RequestBody TransferRequestDTO request) {
+    public ResponseEntity<Transaction> transferFunds(@Valid @RequestBody TransferRequestDTO request) {
         Transaction transaction = transferService.transfer(
             request.sourceAccountNumber(),
             request.destinationAccountNumber(),

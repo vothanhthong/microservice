@@ -1,8 +1,10 @@
 package com.example.banking_monolith.exception;
 
 import java.time.LocalDateTime;
+import java.util.stream.Collectors;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -37,6 +39,25 @@ public class GlobalExceptionHandler {
         ErrorResponse error = new ErrorResponse(
             "INVALID_INPUT",
             ex.getMessage(),
+            LocalDateTime.now()
+        );
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+    }
+
+    /**
+     * Handles payloads that fail validation constraints (MethodArgumentNotValidException).
+     * Extracts all field error messages and joins them together.
+     * Returns 400 Bad Request.
+     */
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ErrorResponse> handleValidationException(MethodArgumentNotValidException ex) {
+        String details = ex.getBindingResult().getFieldErrors().stream()
+                .map(fieldError -> fieldError.getField() + ": " + fieldError.getDefaultMessage())
+                .collect(Collectors.joining(", "));
+        
+        ErrorResponse error = new ErrorResponse(
+            "VALIDATION_FAILED",
+            "Input validation failed: " + details,
             LocalDateTime.now()
         );
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
