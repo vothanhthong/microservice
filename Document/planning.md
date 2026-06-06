@@ -99,8 +99,8 @@ Use prefix-based commit messages to keep a clear log:
   - `POST /api/transfers` (using a `TransferRequestDTO` record).
   - `GET /api/transfers/history/{accountNumber}` (view history).
 * [x] Add basic global error handling using `@RestControllerAdvice` to map exceptions to clean HTTP responses (e.g. 400 Bad Request if balance is insufficient).
-* [ ] Commit APIs: `feat: build REST endpoints and controller advice exception handler`.
-* [ ] Merge branch to main.
+* [x] Commit APIs: `feat: build REST endpoints and controller advice exception handler`.
+* [x] Merge branch to main.
 
 #### [ ] Step 7: Testing with Bruno
 * [ ] Create a `bruno/` directory in the root.
