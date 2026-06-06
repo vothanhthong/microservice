@@ -103,8 +103,8 @@ Use prefix-based commit messages to keep a clear log:
 * [x] Merge branch to main.
 
 #### [ ] Step 7: Testing with Bruno
-* [ ] Create a `bruno/` directory in the root.
-* [ ] Setup Bruno collections and create requests to test:
+* [x] Create a `bruno/` directory in the root.
+* [x] Setup Bruno collections and create requests to test:
   - Create account A (with balance 100).
   - Create account B (with balance 50).
   - Get Account A details.

@@ -1,0 +1,18 @@
+meta {
+  name: Create Account A
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/api/accounts
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "ownerName": "Alice",
+    "initialBalance": 100.00
+  }
+}

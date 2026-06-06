@@ -1,0 +1,19 @@
+meta {
+  name: Transfer A to B
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/api/transfers
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "sourceAccountNumber": "ACC-22B6",
+    "destinationAccountNumber": "ACC-B95E",
+    "amount": 100.00
+  }
+}
