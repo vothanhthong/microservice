@@ -61,10 +61,10 @@ Use prefix-based commit messages to keep a clear log:
 * [x] Verify Java compiles by running `./mvnw compile` in the terminal.
 * [x] Commit files: `feat: initialize spring boot project structure`.
 
-#### [ ] Step 2: Database Configuration
-* [ ] Configure H2 in `src/main/resources/application.properties` (set in-memory URL, enable H2 console path, and set username/password).
-* [ ] Run the app using `./mvnw spring-boot:run` and verify H2 console is accessible at `http://localhost:8080/h2-console`.
-* [ ] Commit changes: `feat: configure H2 database settings`.
+#### [x] Step 2: Database Configuration
+* [x] Configure H2 in `src/main/resources/application.properties` (set in-memory URL, enable H2 console path, and set username/password).
+* [x] Run the app using `./mvnw spring-boot:run` and verify H2 console is accessible at `http://localhost:8080/h2-console`.
+* [x] Commit changes: `feat: configure H2 database settings`.
 
 #### [ ] Step 3: Define the Models & Entities
 * [ ] Create branch `feature/monolith-data-model` (`git checkout -b feature/monolith-data-model`).
