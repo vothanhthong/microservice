@@ -111,8 +111,8 @@ Use prefix-based commit messages to keep a clear log:
   - Transfer 30 from A to B.
   - Verify Account A balance is 70 and B is 80.
   - Get transaction history for A.
-* [ ] Commit collections: `test: add bruno API validation requests`.
-* [ ] Merge branch to main.
+* [x] Commit collections: `test: add bruno API validation requests`.
+* [x] Merge branch to main.
 
 ---
 
