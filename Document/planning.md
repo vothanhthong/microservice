@@ -91,15 +91,16 @@ Use prefix-based commit messages to keep a clear log:
 * [x] Merge branch to main.
 
 #### [ ] Step 6: Build REST Controllers (APIs)
-* [ ] Create branch `feature/monolith-apis` (`git checkout -b feature/monolith-apis`).
-* [ ] Create `com.example.banking.controller.AccountController` exposing:
+* [x] Create branch `feature/monolith-apis` (`git checkout -b feature/monolith-apis`).
+* [x] Create `com.example.banking.controller.AccountController` exposing:
   - `POST /api/accounts` (using an `AccountRequestDTO` record).
   - `GET /api/accounts/{accountNumber}`.
-* [ ] Create `com.example.banking.controller.TransferController` exposing:
+* [x] Create `com.example.banking.controller.TransferController` exposing:
   - `POST /api/transfers` (using a `TransferRequestDTO` record).
   - `GET /api/transfers/history/{accountNumber}` (view history).
-* [ ] Add basic global error handling using `@RestControllerAdvice` to map exceptions to clean HTTP responses (e.g. 400 Bad Request if balance is insufficient).
+* [x] Add basic global error handling using `@RestControllerAdvice` to map exceptions to clean HTTP responses (e.g. 400 Bad Request if balance is insufficient).
 * [ ] Commit APIs: `feat: build REST endpoints and controller advice exception handler`.
+* [ ] Merge branch to main.
 
 #### [ ] Step 7: Testing with Bruno
 * [ ] Create a `bruno/` directory in the root.
