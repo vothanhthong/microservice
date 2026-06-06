@@ -72,10 +72,10 @@ Use prefix-based commit messages to keep a clear log:
 * [x] Create `com.example.banking.model.Transaction` with properties: `id` (Long, `@Id`), `sourceAccountNumber` (String), `destinationAccountNumber` (String), `amount` (BigDecimal), and `timestamp` (LocalDateTime).
 * [x] Commit models: `feat: add Account and Transaction entity models`.
 
-#### [ ] Step 4: Create the JPA Repositories
-* [ ] Create `com.example.banking.repository.AccountRepository` extending `JpaRepository<Account, Long>`. Add a custom method `Optional<Account> findByAccountNumber(String accountNumber)`.
-* [ ] Create `com.example.banking.repository.TransactionRepository` extending `JpaRepository<Transaction, Long>`. Add a custom query method `List<Transaction> findBySourceAccountNumberOrDestinationAccountNumberOrderByTimestampDesc(...)`.
-* [ ] Commit repositories: `feat: create account and transaction JPA repositories`.
+#### [x] Step 4: Create the JPA Repositories
+* [x] Create `com.example.banking.repository.AccountRepository` extending `JpaRepository<Account, Long>`. Add a custom method `Optional<Account> findByAccountNumber(String accountNumber)`.
+* [x] Create `com.example.banking.repository.TransactionRepository` extending `JpaRepository<Transaction, Long>`. Add separate queries for source and destination accounts to keep naming simple.
+* [x] Commit repositories: `feat: create account and transaction JPA repositories`.
 * [ ] Merge branch to main: Switch to main (`git checkout main`), merge (`git merge feature/monolith-data-model`), and delete feature branch.
 
 #### [ ] Step 5: Implement Business Services
