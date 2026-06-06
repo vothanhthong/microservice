@@ -66,11 +66,11 @@ Use prefix-based commit messages to keep a clear log:
 * [x] Run the app using `./mvnw spring-boot:run` and verify H2 console is accessible at `http://localhost:8080/h2-console`.
 * [x] Commit changes: `feat: configure H2 database settings`.
 
-#### [ ] Step 3: Define the Models & Entities
-* [ ] Create branch `feature/monolith-data-model` (`git checkout -b feature/monolith-data-model`).
-* [ ] Create `com.example.banking.model.Account` with properties: `id` (Long, `@Id`), `accountNumber` (String, unique), `ownerName` (String), and `balance` (BigDecimal).
-* [ ] Create `com.example.banking.model.Transaction` with properties: `id` (Long, `@Id`), `sourceAccountNumber` (String), `destinationAccountNumber` (String), `amount` (BigDecimal), and `timestamp` (LocalDateTime).
-* [ ] Commit models: `feat: add Account and Transaction entity models`.
+#### [x] Step 3: Define the Models & Entities
+* [x] Create branch `feature/monolith-data-model` (`git checkout -b feature/monolith-data-model`).
+* [x] Create `com.example.banking.model.Account` with properties: `id` (Long, `@Id`), `accountNumber` (String, unique), `ownerName` (String), and `balance` (BigDecimal).
+* [x] Create `com.example.banking.model.Transaction` with properties: `id` (Long, `@Id`), `sourceAccountNumber` (String), `destinationAccountNumber` (String), `amount` (BigDecimal), and `timestamp` (LocalDateTime).
+* [x] Commit models: `feat: add Account and Transaction entity models`.
 
 #### [ ] Step 4: Create the JPA Repositories
 * [ ] Create `com.example.banking.repository.AccountRepository` extending `JpaRepository<Account, Long>`. Add a custom method `Optional<Account> findByAccountNumber(String accountNumber)`.
