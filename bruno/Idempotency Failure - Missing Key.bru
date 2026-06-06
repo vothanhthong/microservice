@@ -1,0 +1,19 @@
+meta {
+  name: Idempotency Failure - Missing Key
+  type: http
+  seq: 9
+}
+
+post {
+  url: http://localhost:8080/api/transfers
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "sourceAccountNumber": "ACC-1001",
+    "destinationAccountNumber": "ACC-1002",
+    "amount": 30.00
+  }
+}

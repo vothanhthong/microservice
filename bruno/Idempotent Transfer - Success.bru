@@ -1,0 +1,23 @@
+meta {
+  name: Idempotent Transfer - Success
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://localhost:8080/api/transfers
+  body: json
+  auth: none
+}
+
+headers {
+  Idempotency-Key: 123e4567-e89b-12d3-a456-426614174000
+}
+
+body:json {
+  {
+    "sourceAccountNumber": "REPLACE_WITH_ACCOUNT_NUMBER_A",
+    "destinationAccountNumber": "REPLACE_WITH_ACCOUNT_NUMBER_B",
+    "amount": 30.00
+  }
+}
