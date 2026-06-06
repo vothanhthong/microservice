@@ -56,14 +56,14 @@ Use prefix-based commit messages to keep a clear log:
 ### Phase 1.5: Monolith Enterprise Upgrades (Next Up 🚀)
 
 #### [ ] Step 1: Data Defense & Input Validation
-* [ ] Create branch `feature/monolith-validation`.
-* [ ] Add `spring-boot-starter-validation` dependency to `pom.xml`.
-* [ ] Add Bean Validation annotations to DTOs:
+* [x] Create branch `feature/monolith-validation`.
+* [x] Add `spring-boot-starter-validation` dependency to `pom.xml`.
+* [x] Add Bean Validation annotations to DTOs:
   - `AccountRequestDTO`: `@NotBlank` for `ownerName`, `@NotNull` & `@PositiveOrZero` for `initialBalance`.
   - `TransferRequestDTO`: `@NotBlank` for account numbers, `@NotNull` & `@Positive` for `amount`.
-* [ ] Add `@Valid` to controller methods.
-* [ ] Add `MethodArgumentNotValidException` handler in `GlobalExceptionHandler` to return specific field error messages with a `400 Bad Request` status.
-* [ ] Test with Bruno validation failure payloads and verify clean JSON error maps.
+* [x] Add `@Valid` to controller methods.
+* [x] Add `MethodArgumentNotValidException` handler in `GlobalExceptionHandler` to return specific field error messages with a `400 Bad Request` status.
+* [x] Test with Bruno validation failure payloads and verify clean JSON error maps.
 * [ ] Merge branch into `main`.
 
 #### [ ] Step 2: Concurrency & Race Conditions (Optimistic Locking)
