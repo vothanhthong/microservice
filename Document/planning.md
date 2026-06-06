@@ -76,7 +76,7 @@ Use prefix-based commit messages to keep a clear log:
 * [x] Create `com.example.banking.repository.AccountRepository` extending `JpaRepository<Account, Long>`. Add a custom method `Optional<Account> findByAccountNumber(String accountNumber)`.
 * [x] Create `com.example.banking.repository.TransactionRepository` extending `JpaRepository<Transaction, Long>`. Add separate queries for source and destination accounts to keep naming simple.
 * [x] Commit repositories: `feat: create account and transaction JPA repositories`.
-* [ ] Merge branch to main: Switch to main (`git checkout main`), merge (`git merge feature/monolith-data-model`), and delete feature branch.
+* [x] Merge branch to main: Switch to main (`git checkout main`), merge (`git merge feature/monolith-data-model`), and delete feature branch.
 
 #### [ ] Step 5: Implement Business Services
 * [ ] Create branch `feature/monolith-services` (`git checkout -b feature/monolith-services`).
